@@ -1,5 +1,28 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Clock In";
+}
+@{ 
+    ViewData["Message"]="";
 }
 @ViewData["Message"]
 
+<form class="login-form" asp-page-handler="edit" method="post">
+    <input id="Validation1" type="text" placeholder="ID or Passport Number" />
+    <input id="Submit1" type="button" value="Clock In" onclick="myFunction()" />
+</form>
+
+<script>
+    function myFunction() {
+        if (document.getElementById("Submit1").value == "Clock In") {
+            document.getElementById("Submit1").value = "Clock Out";
+        }
+        else {
+            document.getElementById("Submit1").value = "Clock In";
+        }
+
+        //document.getElementById("Validation1").value = "clocked in just fine";
+        document.getElementById("Validation1").value = "Not a Registered Employee ID";
+
+
+    }
+</script>
