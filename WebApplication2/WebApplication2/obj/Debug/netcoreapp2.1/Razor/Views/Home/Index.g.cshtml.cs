@@ -76,7 +76,7 @@ Write(ViewData["Message"]);
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(105, 234, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ffc8b4ac0fa54d70a545e22cae2396bd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6fd30d2a499f460c86d982fcf61cecb8", async() => {
                 BeginContext(168, 164, true);
                 WriteLiteral("\r\n    <input id=\"Validation1\" type=\"text\" placeholder=\"ID or Passport Number\" />\r\n    <input id=\"Submit1\" type=\"button\" value=\"Clock In\" onclick=\"myFunction()\" />\r\n");
                 EndContext();
