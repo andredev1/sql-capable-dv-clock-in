@@ -6,14 +6,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApplication2.Models;
+using back;
+using Microsoft.AspNetCore.Hosting;
+using MaxMind.GeoIP2;
 
 namespace WebApplication2.Controllers
 {
-    public class HomeController : Controller
-    {
+    public class HomeController : Controller {
+
+        
+
         public IActionResult Index()
         {
-            
             ViewData["Message"] = "Your application description page.";
             return View();
         }
@@ -44,3 +48,4 @@ namespace WebApplication2.Controllers
         }
     }
 }
+

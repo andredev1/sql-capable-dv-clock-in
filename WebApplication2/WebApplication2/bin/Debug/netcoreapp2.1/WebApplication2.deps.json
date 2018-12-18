@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "1f5da74c73bcd40a876f54e3c32d49fdb295924e"
+    "signature": "dbdb579738051643e273eed94ce819f25bcd2b52"
   },
   "compilationOptions": {
     "defines": [
@@ -24,16 +24,45 @@
     ".NETCoreApp,Version=v2.1": {
       "WebApplication2/1.0.0": {
         "dependencies": {
+          "MaxMind.GeoIP2": "3.0.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.1"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.1",
+          "back": "1.0.0"
         },
         "runtime": {
           "WebApplication2.dll": {}
         },
         "compile": {
           "WebApplication2.dll": {}
+        }
+      },
+      "MaxMind.Db/2.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/MaxMind.Db.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/MaxMind.Db.dll": {}
+        }
+      },
+      "MaxMind.GeoIP2/3.0.0": {
+        "dependencies": {
+          "MaxMind.Db": "2.4.0",
+          "Microsoft.CSharp": "4.5.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MaxMind.GeoIP2.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/MaxMind.GeoIP2.dll": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
@@ -512,6 +541,14 @@
           "System.Runtime.Extensions": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "back/1.0.0": {
+        "runtime": {
+          "back.dll": {}
+        },
+        "compile": {
+          "back.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3462,6 +3499,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "MaxMind.Db/2.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kxVhCQM3AtHDOa2glAfIP7jU5fJ+35lmEZkZDor+QZoS6UXyG3wRttSbHSC5BshLHFnpAwo58r2J9UxtBHGDAw==",
+      "path": "maxmind.db/2.4.0",
+      "hashPath": "maxmind.db.2.4.0.nupkg.sha512"
+    },
+    "MaxMind.GeoIP2/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ff71bnjI/E/5+5hnXgFjQ63jg4GZ55n4TUNGgfGJQF3AOz4vrp6ajq/TN4qj8rzd+ZVVYSMjOGDqzQ4gLzi81g==",
+      "path": "maxmind.geoip2/3.0.0",
+      "hashPath": "maxmind.geoip2.3.0.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -3643,6 +3694,11 @@
       "sha512": "sha512-td7x21K8LalpjTWCzW/nQboQIFbq9i0r+PCyBBCdLWWnm4NBcdN18vpz/G9hCpUaCIfRL+ZxJNVTywlNlB1aLQ==",
       "path": "system.linq.parallel/4.3.0",
       "hashPath": "system.linq.parallel.4.3.0.nupkg.sha512"
+    },
+    "back/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

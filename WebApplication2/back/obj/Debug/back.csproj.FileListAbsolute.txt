@@ -90,3 +90,10 @@ C:\Users\andre\Documents\chocAdminSide\WindowsFormsApp1\back\obj\Debug\back.cspr
 C:\Users\andre\Documents\chocAdminSide\WindowsFormsApp1\back\obj\Debug\back.csproj.CoreCompileInputs.cache
 C:\Users\andre\Documents\chocAdminSide\WindowsFormsApp1\back\obj\Debug\back.dll
 C:\Users\andre\Documents\chocAdminSide\WindowsFormsApp1\back\obj\Debug\back.pdb
+C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\back\bin\Debug\back.dll.config
+C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\back\bin\Debug\back.dll
+C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\back\bin\Debug\back.pdb
+C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\back\obj\Debug\back.csprojAssemblyReference.cache
+C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\back\obj\Debug\back.csproj.CoreCompileInputs.cache
+C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\back\obj\Debug\back.dll
+C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\back\obj\Debug\back.pdb

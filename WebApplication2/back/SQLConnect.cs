@@ -28,10 +28,10 @@ namespace back
         }
 
         //lecturer functions......................................................................................
-        public bool ValidateLecturer(string name, string password)
+        public bool ValidateEmployee(string ID)
         {
             bool noResultExists = true;
-            sql = " select  *  from Lecturers  where name = '" + name + "' and password = '" + password + "'; ";
+            sql = "SELECT  * FROM tbl_ClockIn";
 
             try
             {
