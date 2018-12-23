@@ -4638,15 +4638,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
-      },
-      "back/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/back.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/back.dll": {}
-        }
       }
     }
   },
@@ -12585,11 +12576,6 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
-    },
-    "back/1.0.0": {
-      "type": "project",
-      "path": "../back/back.csproj",
-      "msbuildProject": "../back/back.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12598,8 +12584,7 @@
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1",
-      "back >= 1.0.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.1"
     ]
   },
   "packageFolders": {
@@ -12631,11 +12616,7 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {
-            "C:\\Users\\andre\\Documents\\sql capable dv clock in\\WebApplication2\\back\\back.csproj": {
-              "projectPath": "C:\\Users\\andre\\Documents\\sql capable dv clock in\\WebApplication2\\back\\back.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

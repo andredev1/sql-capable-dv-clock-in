@@ -6,19 +6,34 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApplication2.Models;
-using back;
 using Microsoft.AspNetCore.Hosting;
 using MaxMind.GeoIP2;
+using Microsoft.Extensions.Configuration;
+using System.Data.SqlClient;
 
 namespace WebApplication2.Controllers
 {
     public class HomeController : Controller {
 
-        
+        private  IConfiguration configuration;
 
+        public void FirstController(IConfiguration config)
+        {
+            this.configuration = config;
+        }
         public IActionResult Index()
         {
-            ViewData["Message"] = "Your application description page.";
+            string ID = "69";
+            string connectionstring = "Server=localhost\\MSSQLSERVER01;Database=master;Trusted_Connection=True;";
+            SqlConnection connection = new SqlConnection(connectionstring);
+            connection.Open();
+            SqlCommand com = new SqlCommand("Select count(*) from tbl_ClockIn where fld_personalIDnumber='" + ID + "'", connection);
+            var count = (int)com.ExecuteScalar();
+            
+                ViewData["Message"] = count;
+            
+            com = new SqlCommand("insert into tbl_ClockIn(fld_firstName,fld_lastName,fld_personalIDnumber,fld_osName,fld_osVersion,fld_browserName,fld_browserVersion,fld_navigatorUserAgent,fld_navigatorAppVersion,fld_navigatorPlatform,fld_navigatorVendor,fld_latitube,fld_longitude,fld_dateTime) values('penis', 'penis', '69', 'penis', 'penis', 'penis', 'penis', 'penis', 'penis', 'penis', 'penis', 'penis', 'penis', '2018-03-03'); ", connection);
+            com.ExecuteScalar();
             return View();
         }
 

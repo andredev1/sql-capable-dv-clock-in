@@ -10,6 +10,9 @@
 
 <script>
     function myFunction() {
+
+        
+        getLocation();
         if (document.getElementById("Submit1").value == "Clock In") {
             document.getElementById("Submit1").value = "Clock Out";
         }
@@ -17,8 +20,29 @@
             document.getElementById("Submit1").value = "Clock In";
         }
 
-        //document.getElementById("Validation1").value = "clocked in just fine";
-        document.getElementById("Validation1").value = "Not a Registered Employee ID";
+        if (@ViewData["Message"]> 0 & document.getElementById("Validation1").value == "Welcome Back :)") {
+            document.getElementById("Validation1").value = "See you later";
+        }
+        else if (@ViewData["Message"]> 0) {
+            document.getElementById("Validation1").value = "Welcome Back :)";
+        }
+        
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+
+       
 
 
     }
@@ -143,3 +167,4 @@
         document.getElementById('log').innerHTML = debug;
     }());
 </script>
+
