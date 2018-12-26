@@ -23,7 +23,7 @@ namespace WebApplication2.Controllers
         }
         public IActionResult Index()
         {
-            string ID = "69";
+            string ID = "EN569534";
             string connectionstring = "Server=localhost\\MSSQLSERVER01;Database=master;Trusted_Connection=True;";
             SqlConnection connection = new SqlConnection(connectionstring);
             connection.Open();
@@ -37,7 +37,13 @@ namespace WebApplication2.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult SendData()
+        {
+
+            return View();
+        }
+
+            public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
 

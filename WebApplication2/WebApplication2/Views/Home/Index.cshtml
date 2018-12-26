@@ -11,7 +11,7 @@
 <script>
     function myFunction() {
 
-        
+
         getLocation();
         if (document.getElementById("Submit1").value == "Clock In") {
             document.getElementById("Submit1").value = "Clock Out";
@@ -26,7 +26,7 @@
         else if (@ViewData["Message"]> 0) {
             document.getElementById("Validation1").value = "Welcome Back :)";
         }
-        
+
         var x = document.getElementById("demo");
 
         function getLocation() {
@@ -42,12 +42,11 @@
                 "<br>Longitude: " + position.coords.longitude;
         }
 
-       
+
 
 
     }
 </script>
-
 
 <button onclick="getLocation()">CLICK ME</button>
 
@@ -165,6 +164,26 @@
         debug += 'navigator.vendor = ' + navigator.vendor + '<br/>';
 
         document.getElementById('log').innerHTML = debug;
+
+
+        var x = document.getElementById("demo");
+        getLocation();
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
     }());
 </script>
 
+
+
+<a asp-area="" asp-controller="Home" asp-action="SendData">Home</a>
