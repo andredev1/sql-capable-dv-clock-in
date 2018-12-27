@@ -3,21 +3,50 @@
 }
 @ViewData["Message"]
 
-<form class="login-form" asp-page-handler="edit" method="post">
+<form class="login-form" asp-controller="Home" asp-action="About" method="POST">
     <input id="Validation1" type="text" placeholder="ID or Passport Number" />
-    <input id="Submit1" type="button" value="Clock In" onclick="myFunction()" />
+    <input id="FirstName" type="text" value="sdfasfafadsf">
+    <input id="lastName" type="text" value="">
+    <input id="personalIDnumber" type="text" value="">
+    <input id="latitude" type="text" value=""+<script>document.getElementsById("latitude").value = "moo"</script>>
+    <input id="longitude" type="text" value="">
+    <input id="osName" type="text" value="">
+    <input id="osVersion" type="text" value="">
+    <input id="browserName" type="text" value="">
+    <input id="browserVersion" type="text" value="">
+    <input id="navigatorUserAgent" type="text" value="">
+    <input id="navigatorAppVersion" type="text" value="">
+    <input id="navigatorPlatform" type="text" value="">
+    <input id="navigatorVendor" type="text" value="">
+    <input id="dateTime" type="text">
+
+    <input type="submit" value="Clock In/Clock out" />
 </form>
 
 <script>
     function myFunction() {
-
+        document.getElementsById("FirstName").value = "moo";
+        //document.getElementsById("lastName").value = "moo";
+        //document.getElementsById("personalIDnumber").value = "moo";
+        //document.getElementsById("latitude").value = "moo";
+        //document.getElementsById("longitude").value = "moo";
+        //document.getElementsById("osName").value = "moo";
+        //document.getElementsById("osVersion").value = "moo";
+        //document.getElementsById("browserName").value = "moo";
+        //document.getElementsById("browserVersion").value = "moo";
+        //document.getElementsById("navigatorUserAgent").value = "moo";
+        //document.getElementsById("navigatorAppVersion").value = "moo";
+        //document.getElementsById("navigatorPlatform").value = "moo";
+        //document.getElementsById("navigatorVendor").value = "moo";
+        //document.getElementsById("dateTime").value = "moo";
+        //document.forms[0].submit();
 
         getLocation();
-        if (document.getElementById("Submit1").value == "Clock In") {
-            document.getElementById("Submit1").value = "Clock Out";
+        if (document.getElementById("Validation1").value == "Clock In") {
+            document.getElementById("Validation1").value = "Clock Out";
         }
         else {
-            document.getElementById("Submit1").value = "Clock In";
+            document.getElementById("Validation1").value = "Clock In";
         }
 
         if (@ViewData["Message"]> 0 & document.getElementById("Validation1").value == "Welcome Back :)") {
@@ -48,7 +77,7 @@
     }
 </script>
 
-<button onclick="getLocation()">CLICK ME</button>
+<button onclick="myFunction()">CLICK ME</button>
 
 <p id="demo"></p>
 
@@ -64,8 +93,15 @@
     }
 
     function showPosition(position) {
+        var currentdate = new Date();
+        var datetime = " currentdate.getDate() + " / "
+            + (currentdate.getMonth() + 1) + "/"
+            + currentdate.getFullYear() + " "
+            + currentdate.getHours() + ":"
+            + currentdate.getMinutes() + ":"
+            + currentdate.getSeconds();
         x.innerHTML = "Latitude: " + position.coords.latitude +
-            "<br>Longitude: " + position.coords.longitude;
+            "<br>Longitude: " + position.coords.longitude + datetime;
     }
 
 
@@ -168,6 +204,8 @@
 
         var x = document.getElementById("demo");
         getLocation();
+        document.getElementsById("FirstName").value = "moo";
+        
 
         function getLocation() {
             if (navigator.geolocation) {
@@ -181,21 +219,11 @@
             x.innerHTML = "Latitude: " + position.coords.latitude +
                 "<br>Longitude: " + position.coords.longitude;
         }
+
+        
+
     }());
 </script>
 
 
 
-<form asp-controller="Home" asp-action="About" method="POST">
-    <input name="latitude" type="text">
-    <input name="longitude" type="text">
-    <input name="osName" type="text">
-    <input name="osVersion" type="text">
-    <input name="browserName" type="text">
-    <input name="browserVersion" type="text">
-    <input name="navigatorUserAgent" type="text">
-    <input name="navigatorAppVersion" type="text">
-    <input name="navigatorPlatform" type="text">
-    <input name="navigatorVendor" type="text">
-    <input type="submit" value="View Report" />
-</form> 
