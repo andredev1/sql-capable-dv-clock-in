@@ -30,21 +30,7 @@ namespace WebApplication2.Controllers
             SqlCommand com = new SqlCommand("Select count(*) from tbl_ClockIn where fld_personalIDnumber='" + ID + "'", connection);
             var count = (int)com.ExecuteScalar();
             
-            ViewData["firstName"] = count;
-            ViewData["lastName"] = count;
-            ViewData["personalIDnumber"] = count;
-            ViewData["latitude"] = count;
-            ViewData["longitude"] = count;
-            ViewData["osName"] = count;
-            ViewData["osVersion"] = count;
-            ViewData["browserName"] = count;
-            ViewData["browserVersion"] = count;
-            ViewData["navigatorUserAgent"] = count;
-            ViewData["navigatorAppVersion"] = count;
-            ViewData["navigatorPlatform"] = count;
-            ViewData["navigatorVendor"] = count;
-            ViewData["dateTime"] = count;
-
+            
 
             com = new SqlCommand("insert into tbl_ClockIn(fld_firstName,fld_lastName,fld_personalIDnumber,fld_osName,fld_osVersion,fld_browserName,fld_browserVersion,fld_navigatorUserAgent,fld_navigatorAppVersion,fld_navigatorPlatform,fld_navigatorVendor,fld_latitube,fld_longitude,fld_dateTime) values('penis', 'penis', '69', 'penis', 'penis', 'penis', 'penis', 'penis', 'penis', 'penis', 'penis', 'penis', 'penis', '2018-03-03'); ", connection);
             com.ExecuteScalar();
@@ -75,7 +61,6 @@ namespace WebApplication2.Controllers
             connection.Open();
             SqlCommand com = new SqlCommand("insert into tbl_ClockIn(fld_firstName,fld_lastName,fld_personalIDnumber,fld_osName,fld_osVersion,fld_browserName,fld_browserVersion,fld_navigatorUserAgent,fld_navigatorAppVersion,fld_navigatorPlatform,fld_navigatorVendor,fld_latitube,fld_longitude,fld_dateTime) values('', '', '', '"+osName+ "', '" + osVersion + "', '" + browserName + "', '" + browserVersion + "', '" + navigatorUserAgent + "', '" + navigatorAppVersion + "', '" + navigatorPlatform + "', '" + navigatorVendor + "', '" + latitude + "', '" + longitude+"', '"+"'); ", connection);
             com.ExecuteScalar();
-            ViewData["Message"] = com.ExecuteScalar()+"it worked";
 
             return View();
         }
