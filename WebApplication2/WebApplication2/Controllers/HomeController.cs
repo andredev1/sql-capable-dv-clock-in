@@ -21,7 +21,7 @@ namespace WebApplication2.Controllers
         {
             this.configuration = config;
         }
-        public IActionResult Index()
+        public IActionResult Index(string firstName, string lastName, string personalIDnumber, string latitude, string longitude, string osName, string osVersion, string browserName, string browserVersion, string navigatorUserAgent, string navigatorAppVersion, string navigatorPlatform, string navigatorVendor, string dateTime)
         {
             string ID = "EN569534";
             string connectionstring = "Server=localhost\\MSSQLSERVER01;Database=master;Trusted_Connection=True;";
@@ -32,7 +32,7 @@ namespace WebApplication2.Controllers
             
             
 
-            com = new SqlCommand("insert into tbl_ClockIn(fld_firstName,fld_lastName,fld_personalIDnumber,fld_osName,fld_osVersion,fld_browserName,fld_browserVersion,fld_navigatorUserAgent,fld_navigatorAppVersion,fld_navigatorPlatform,fld_navigatorVendor,fld_latitube,fld_longitude,fld_dateTime) values('penis', 'penis', '69', 'penis', 'penis', 'penis', 'penis', 'penis', 'penis', 'penis', 'penis', 'penis', 'penis', '2018-03-03'); ", connection);
+            com = new SqlCommand("insert into tbl_ClockIn(fld_firstName,fld_lastName,fld_personalIDnumber,fld_osName,fld_osVersion,fld_browserName,fld_browserVersion,fld_navigatorUserAgent,fld_navigatorAppVersion,fld_navigatorPlatform,fld_navigatorVendor,fld_latitube,fld_longitude,fld_dateTime) values('" + firstName + "', '" + lastName + "', '" + personalIDnumber + "', '" + osName + "', '" + osVersion + "', '" + browserName + "', '" + browserVersion + "', '" + navigatorUserAgent + "', '" + navigatorAppVersion + "', '" + navigatorPlatform + "', '" + navigatorVendor + "', '" + latitude + "', '" + longitude + "', '1900-01-01'); ", connection);
             com.ExecuteScalar();
             return View();
         }
@@ -53,13 +53,13 @@ namespace WebApplication2.Controllers
             return View();
         }
 
-            public IActionResult About(string latitude, string longitude, string osName, string osVersion, string browserName, string browserVersion, string navigatorUserAgent, string navigatorAppVersion, string navigatorPlatform, string navigatorVendor)
+            public IActionResult About(string firstName, string lastName, string personalIDnumber, string latitude, string longitude, string osName, string osVersion, string browserName, string browserVersion, string navigatorUserAgent, string navigatorAppVersion, string navigatorPlatform, string navigatorVendor, string dateTime)
         {
             
             string connectionstring = "Server=localhost\\MSSQLSERVER01;Database=master;Trusted_Connection=True;";
             SqlConnection connection = new SqlConnection(connectionstring);
             connection.Open();
-            SqlCommand com = new SqlCommand("insert into tbl_ClockIn(fld_firstName,fld_lastName,fld_personalIDnumber,fld_osName,fld_osVersion,fld_browserName,fld_browserVersion,fld_navigatorUserAgent,fld_navigatorAppVersion,fld_navigatorPlatform,fld_navigatorVendor,fld_latitube,fld_longitude,fld_dateTime) values('', '', '', '"+osName+ "', '" + osVersion + "', '" + browserName + "', '" + browserVersion + "', '" + navigatorUserAgent + "', '" + navigatorAppVersion + "', '" + navigatorPlatform + "', '" + navigatorVendor + "', '" + latitude + "', '" + longitude+"', '"+"'); ", connection);
+            SqlCommand com = new SqlCommand("insert into tbl_ClockIn(fld_firstName,fld_lastName,fld_personalIDnumber,fld_osName,fld_osVersion,fld_browserName,fld_browserVersion,fld_navigatorUserAgent,fld_navigatorAppVersion,fld_navigatorPlatform,fld_navigatorVendor,fld_latitube,fld_longitude,fld_dateTime) values('"+firstName+"', '"+lastName+"', '"+personalIDnumber+"', '"+osName+ "', '" + osVersion + "', '" + browserName + "', '" + browserVersion + "', '" + navigatorUserAgent + "', '" + navigatorAppVersion + "', '" + navigatorPlatform + "', '" + navigatorVendor + "', '" + latitude + "', '" + longitude+"', '1900-01-01'); ", connection);
             com.ExecuteScalar();
 
             return View();
