@@ -37,6 +37,11 @@ namespace WebApplication2.Controllers
             return View();
         }
 
+        public IActionResult MyAction()
+        {
+            return View();
+        }
+
         public void NewRecord()
         {
             string ID = "EN569534";
