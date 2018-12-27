@@ -4,42 +4,43 @@
 @ViewData["Message"]
 
 <form class="login-form" asp-controller="Home" asp-action="About" method="POST">
-    <input id="Validation1" type="text" placeholder="ID or Passport Number" />
-    <input id="FirstName" type="text" value="sdfasfafadsf">
-    <input id="lastName" type="text" value="">
-    <input id="personalIDnumber" type="text" value="">
-    <input id="latitude" type="text" value=""+<script>document.getElementsById("latitude").value = "moo"</script>>
-    <input id="longitude" type="text" value="">
-    <input id="osName" type="text" value="">
-    <input id="osVersion" type="text" value="">
-    <input id="browserName" type="text" value="">
-    <input id="browserVersion" type="text" value="">
-    <input id="navigatorUserAgent" type="text" value="">
-    <input id="navigatorAppVersion" type="text" value="">
-    <input id="navigatorPlatform" type="text" value="">
-    <input id="navigatorVendor" type="text" value="">
-    <input id="dateTime" type="text">
+    <input type="hidden" id="firstName"  value="asdfsdfasdfasfasdfasdfsdafasdfasdfasdfasfasfd" />
+    <input type="hidden" id="lastName"  value=@ViewData["lastName"]>
+    <input type="hidden" id="personalIDnumber"  value=@ViewData["personalIDnumber"]>
+    <input type="hidden" id="latitude"  value=@ViewData["latitude"]>
+    <input type="hidden" id="longitude"  value=@ViewData["longitude"]>
+    <input type="hidden" id="osName"  value=@ViewData["osName"]>
+    <input type="hidden" id="osVersion"  value=@ViewData["osVersion"]>
+    <input type="hidden" id="browserName"  value=@ViewData["browserName"]>
+    <input type="hidden" id="browserVersion"  value=@ViewData["browserVersion"]>
+    <input type="hidden" id="navigatorUserAgent"  value=@ViewData["navigatorUserAgent"]>
+    <input type="hidden" id="navigatorAppVersion"  value=@ViewData["navigatorAppVersion"]>
+    <input type="hidden" id="navigatorPlatform"  value=@ViewData["navigatorPlatform"]>
+    <input type="hidden" id="navigatorVendor"  value=@ViewData["navigatorVendor"]>
+    <input type="hidden" id="dateTime"  value="@ViewData["dateTime"]">
 
     <input type="submit" value="Clock In/Clock out" />
 </form>
 
+@ViewData["firstName"] = "Penis";
+@ViewData["lastName"] = "Penis";
+@ViewData["personalIDnumber"] = "Penis";
+@ViewData["latitude"] = "Penis";
+@ViewData["longitude"] = "Penis";
+@ViewData["osName"] = "Penis";
+@ViewData["osVersion"] = "Penis";
+@ViewData["browserName"] = "Penis";
+@ViewData["browserVersion"] = "Penis";
+@ViewData["navigatorUserAgent"] = "Penis";
+@ViewData["navigatorAppVersion"] = "Penis";
+@ViewData["navigatorPlatform"] = "Penis";
+@ViewData["navigatorVendor"] = "Penis";
+@ViewData["dateTime"] = "Penis";
+
 <script>
     function myFunction() {
-        document.getElementsById("FirstName").value = "moo";
-        //document.getElementsById("lastName").value = "moo";
-        //document.getElementsById("personalIDnumber").value = "moo";
-        //document.getElementsById("latitude").value = "moo";
-        //document.getElementsById("longitude").value = "moo";
-        //document.getElementsById("osName").value = "moo";
-        //document.getElementsById("osVersion").value = "moo";
-        //document.getElementsById("browserName").value = "moo";
-        //document.getElementsById("browserVersion").value = "moo";
-        //document.getElementsById("navigatorUserAgent").value = "moo";
-        //document.getElementsById("navigatorAppVersion").value = "moo";
-        //document.getElementsById("navigatorPlatform").value = "moo";
-        //document.getElementsById("navigatorVendor").value = "moo";
-        //document.getElementsById("dateTime").value = "moo";
-        //document.forms[0].submit();
+
+
 
         getLocation();
         if (document.getElementById("Validation1").value == "Clock In") {
@@ -205,7 +206,7 @@
         var x = document.getElementById("demo");
         getLocation();
         document.getElementsById("FirstName").value = "moo";
-        
+
 
         function getLocation() {
             if (navigator.geolocation) {
@@ -220,7 +221,20 @@
                 "<br>Longitude: " + position.coords.longitude;
         }
 
-        
+        @ViewData["firstName"] = "Penis";
+@ViewData["lastName"] = "Penis";
+@ViewData["personalIDnumber"] = "Penis";
+@ViewData["latitude"] = "Penis";
+@ViewData["longitude"] = "Penis";
+@ViewData["osName"] = "Penis";
+@ViewData["osVersion"] = "Penis";
+@ViewData["browserName"] = "Penis";
+@ViewData["browserVersion"] = "Penis";
+@ViewData["navigatorUserAgent"] = "Penis";
+@ViewData["navigatorAppVersion"] = "Penis";
+@ViewData["navigatorPlatform"] = "Penis";
+@ViewData["navigatorVendor"] = "Penis";
+@ViewData["dateTime"] = "Penis";
 
     }());
 </script>
