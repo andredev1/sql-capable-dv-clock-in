@@ -63,3 +63,7 @@ C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\WebApplication2
 C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.1\WebApplication2.pdb
 C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.1\WebApplication2.csproj.CopyComplete
 C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Create.g.cshtml.cs
+C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Delete.g.cshtml.cs
+C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Details.g.cshtml.cs
+C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.1\Razor\Views\Home\Edit.g.cshtml.cs
