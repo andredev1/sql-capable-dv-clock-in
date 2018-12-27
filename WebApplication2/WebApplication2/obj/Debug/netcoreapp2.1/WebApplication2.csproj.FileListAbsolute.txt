@@ -60,3 +60,4 @@ C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\WebApplication2
 C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.1\WebApplication2.dll
 C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.1\WebApplication2.pdb
 C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.1\WebApplication2.csproj.CopyComplete
+C:\Users\andre\Documents\sql capable dv clock in\WebApplication2\WebApplication2\obj\Debug\netcoreapp2.1\WebApplication2.csprojAssemblyReference.cache
